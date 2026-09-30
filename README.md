@@ -61,11 +61,13 @@ For an individual account, use a private plugin containing the same skill and a 
 
 4. In a ChatGPT Work chat, ask Plugin Creator to create a private plugin from the generated `dist/keypool-chatgpt/keypool-workflows.zip`. Install it and select **KeyPool workflows** with an @ mention in a new chat.
 
-The private package omits both MCP configuration files, uses an app reference, and keeps the skill and service references aligned with this release. See [OpenAI's app-reference guide](https://learn.chatgpt.com/docs/enterprise/plugin-management#reference-an-existing-app-with-appjson).
+The private package omits both MCP configuration files, uses an app reference, and keeps the skill and service references aligned with this release. See [OpenAI's app-reference guide](https://developers.openai.com/codex/enterprise/plugin-management).
 
 The private skill package reuses the existing app's connection and permissions. Each account needs its own accessible app and private plugin; another person's private plugin link does not grant access. Keep the original registered app connected. Account-specific bindings are not published here.
 
-ChatGPT web has been tested with the private package. OpenAI documents plugins on supported mobile surfaces, but this private custom MCP connection has not been tested in a native mobile client. Do not treat a responsive browser test as mobile qualification. To check your account, select KeyPool workflows in a new mobile Work chat and ask which KeyPool services are available; the chat must load the skill and actually call `keypool_profile`.
+Version 0.1.2 was tested in a fresh ChatGPT web Work chat: it used the updated skill guidance and called `keypool_profile` once, returning six authorized services and 15 provider tools. The owner also tested the private plugin in native ChatGPT mobile and confirmed that it worked and listed six services. These checks apply to that account and connection. To qualify another account or client version, select KeyPool workflows in a new Work chat and request `keypool_profile`; confirm the skill and actual tool result. See [OpenAI's supported plugin surfaces](https://developers.openai.com/codex/plugins).
+
+An existing Codex marketplace installation can stay installed. It shares the canonical skill and backend with the private ChatGPT package, while each client keeps its own installation. In ChatGPT, select KeyPool workflows and keep the original KeyPool app connected as its dependency. If both variants appear in one client, select one for a chat to avoid duplicate instructions or tool choices.
 
 Public ChatGPT directory distribution requires a separate verified publisher submission. This repository is a public, self-distributed marketplace; it is not an approved OpenAI directory listing.
 
