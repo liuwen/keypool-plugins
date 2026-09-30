@@ -2,204 +2,204 @@
   "files": {
     "assets/icon.png": "a2e208a46e53ab27fb4304fb727f1859732e3923d5c52099f8fba4e4c73cce21",
     "mcp.json": "c11cdeede75b6d37c70df965f7ac2855c4d2794aa2d5a465e6858748c2b8c812",
-    "plugin.json": "e6026fd41649c44a36d46a41b41acfb60af1ea09e73ba437b88925791a8a32e9",
-    "skills/keypool/SKILL.md": "de797330c8a87461b44257b48e1c382a52239d3fe6e2a31ea8dede01b79c4e04",
+    "plugin.json": "e62789f1c7a40281dc91e340be5568174042a099fb68f9d3367004101be3ba32",
+    "skills/keypool/SKILL.md": "781d165f7e7639c022e20aedd9b106a997680cc91489d2a4508f75bbf13fbdd2",
     "skills/keypool/agents/openai.yaml": "8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
-    "skills/keypool/references/data.md": "af1a4c8bca07e30d42fe418284b2a4e833697c6a2e6ed67829deb65f16fe728b",
-    "skills/keypool/references/media.md": "acd8955b3a829436039834c0779625730ffc9dd2e5c85a08208012bf07d3c44f",
-    "skills/keypool/references/search.md": "d2bae563694b61fe716b44ff3a9a343b08b84c2df6bb75034e929845c632d3bc"
+    "skills/keypool/references/data.md": "893da59f3003f33c408ce099af8b83425156f680046d0e78350b25cc86dbfb2a",
+    "skills/keypool/references/media.md": "bdb460197e9fd5228f3d3c29c8aca3a53ff184b1d442c07fa0bcb996b1b2e37c",
+    "skills/keypool/references/search.md": "ea6d6170ec6fd59639c482c80909d232fc763a03fa3720cf00ad4bd3cd5dcb24"
   },
   "mcp_url": "https://keypool.whatsinfor.me/mcp",
   "name": "keypool",
   "provider_tool_count": 44,
   "skill_resources": {
-    "skill://keypool/keypool/SKILL.md": "sha256:de797330c8a87461b44257b48e1c382a52239d3fe6e2a31ea8dede01b79c4e04",
+    "skill://keypool/keypool/SKILL.md": "sha256:781d165f7e7639c022e20aedd9b106a997680cc91489d2a4508f75bbf13fbdd2",
     "skill://keypool/keypool/agents/openai.yaml": "sha256:8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
-    "skill://keypool/keypool/references/data.md": "sha256:af1a4c8bca07e30d42fe418284b2a4e833697c6a2e6ed67829deb65f16fe728b",
-    "skill://keypool/keypool/references/media.md": "sha256:acd8955b3a829436039834c0779625730ffc9dd2e5c85a08208012bf07d3c44f",
-    "skill://keypool/keypool/references/search.md": "sha256:d2bae563694b61fe716b44ff3a9a343b08b84c2df6bb75034e929845c632d3bc"
+    "skill://keypool/keypool/references/data.md": "sha256:893da59f3003f33c408ce099af8b83425156f680046d0e78350b25cc86dbfb2a",
+    "skill://keypool/keypool/references/media.md": "sha256:bdb460197e9fd5228f3d3c29c8aca3a53ff184b1d442c07fa0bcb996b1b2e37c",
+    "skill://keypool/keypool/references/search.md": "sha256:ea6d6170ec6fd59639c482c80909d232fc763a03fa3720cf00ad4bd3cd5dcb24"
   },
   "tools": {
     "aviationstack_aircraft_types": {
       "service": "aviationstack",
-      "sha256": "552b094ec94a19756c161be2b4e2f093de8625ee826aee271481a5ed3dc880b4"
+      "sha256": "c56eaa0e975288fd53337dd52ae6b9f3247f0f13c29c7de123db7e51d6be3a5a"
     },
     "aviationstack_airlines": {
       "service": "aviationstack",
-      "sha256": "4a224d33e3e928f2f8f7a12ec3de04d87e2331b0e591269f9ab1afe36cc941cb"
+      "sha256": "17b0aba537011446a4a97cebc3d44793c1f3398142992deff38ebe375d75439a"
     },
     "aviationstack_airplanes": {
       "service": "aviationstack",
-      "sha256": "81e8bc3515e1395891f3ee4b6138441a4759d4f2b2390bc26e9cace76488dcbe"
+      "sha256": "1e511a484715b7f1b5b40b48bb0a1913abb8bc3e046b4c1f169b160090642ca5"
     },
     "aviationstack_airports": {
       "service": "aviationstack",
-      "sha256": "7a470e70ab5d55af0d58972d3603a6cb1985591078ea7e1b9fb493a24b999504"
+      "sha256": "58f36a1e0e37649fd41643a95a60a2c5b7344ac1847930d704cb113c024b12c9"
     },
     "aviationstack_cities": {
       "service": "aviationstack",
-      "sha256": "c6e45d1d94bea1b66d8fa9d55c19f2faf046175b19d9f8f423ace6087fa5a4d3"
+      "sha256": "d1cb9b00bd672befebd3e6baef97ddfdcccb8011e5ae1b8e3955ab61fff01c95"
     },
     "aviationstack_countries": {
       "service": "aviationstack",
-      "sha256": "410cc08b073c63c02f808912487a743f706aa876c2d28eea5f4de7d64602cbb3"
+      "sha256": "c19266ca54dca4b3e98c007ce4deeee4de927ee17033fdd9d89b13746e0a63b3"
     },
     "aviationstack_flights": {
       "service": "aviationstack",
-      "sha256": "20377b3289bd3b0e1d6962ed883fbd228b75272a6218dd92a396b0e4e5e1305f"
+      "sha256": "1ac7fdc8f1d46934399c394b64285dba7993b1e963c905826c07d79e2f9692cf"
     },
     "aviationstack_future_flights": {
       "service": "aviationstack",
-      "sha256": "ca554ff1332a4f057b887d48693757caa9730983878b7522c7055eefd641dfc3"
+      "sha256": "7de512a2fb5400566263132ac3bb1599c1121f900fecf6753e381b93b40565fb"
     },
     "aviationstack_routes": {
       "service": "aviationstack",
-      "sha256": "9a1b72f56b4963e90740495ae3ac18585d9e9f64c789a31578e80948b1ae6b40"
+      "sha256": "a8f7fc4ccac7f8aeee7a4d58be5f63438dc70de9ecc954e11a7062c03828b68f"
     },
     "aviationstack_taxes": {
       "service": "aviationstack",
-      "sha256": "4e1d08d33e1c8cd1ae2d2d5befcbb501e8b57456eb975683639cbf34b6a84273"
+      "sha256": "28db109c26b2617de3bd9a1736cff2541cee12cafc33a6d9c510e75379baa16a"
     },
     "aviationstack_timetable": {
       "service": "aviationstack",
-      "sha256": "7bd7b661398ed12e67177991206bdf70ba087541ac05404942ea735d59fb31e8"
+      "sha256": "9daf61bb1fec3193dce3e407782871a59883fe087c39254f46029721f4dcc472"
     },
     "cartesia_list_voices": {
       "service": "cartesia",
-      "sha256": "1f38cbe4b148132ccb7502d63bd75b9d7d1f6ccc2ceca8d8f7e1ba27ec4e9d7a"
+      "sha256": "0309ed96af05defce5ee392b6c5ac5f5d1b8b6fae2b314af8cab49c469d81616"
     },
     "cartesia_synthesize_speech": {
       "service": "cartesia",
-      "sha256": "d7a98e40170de116ee56b665f662f6ad866d32d9ea5ea2dd30e156ba7564ca96"
+      "sha256": "03d0693a57ad6e71d574e29bb3683becf7fcf566668a7bbce036987c13efb8df"
     },
     "deepgram_list_models": {
       "service": "deepgram",
-      "sha256": "bf99a7b1046113ec8f18d1bef009f586356c325e57cf8c97d17ddbd4e59d8fc1"
+      "sha256": "6c558c727ac08f48446c7a20c687313ba1dc36f53ce15d0c912e22be596a87a2"
     },
     "deepgram_synthesize_speech": {
       "service": "deepgram",
-      "sha256": "75a9e8ac24cd2325fb3ba4d888655f889a91a209cd36c4d30dcd14187ac0ebe7"
+      "sha256": "27f1552e373f2ba204bc886b3b061f9a5f1d6422bb6d35c6b307c49f826d7b4b"
     },
     "exa_find_similar": {
       "service": "exa",
-      "sha256": "2f634bccb045362805fd392a3ab3b0a3dbfa5e60f5d4cf1981ce2b39b8f56af2"
+      "sha256": "9aa1e0da4d29076f4c07a73060e94da50a1b46a7aba8ba31b53a7ba2bdd79d9d"
     },
     "exa_get_contents": {
       "service": "exa",
-      "sha256": "7a794e82e4d43ddd67f197b931ea59403d1b1b3a151b14032bae25a8eaa78909"
+      "sha256": "31196616406164e77a5f6b9863e8919250e9e83ccd31fb5130c17fcf2b8b4d83"
     },
     "exa_search": {
       "service": "exa",
-      "sha256": "ccb4d44565510423a971fd80aedbbfdb3f0a45c33c19a4335e8411e2135806d7"
+      "sha256": "4d650ded8f1e9f7a3807865afdfb2b005e1f855fa7e53a0a0a3ad47147dd49d6"
     },
     "firecrawl_extract": {
       "service": "firecrawl",
-      "sha256": "2a409009b62560d200680c93f2be366b1a8de97af10e5c6153b9452233b4bb29"
+      "sha256": "859a4c93a6b0095873787f12d1deb5a1caedfb083d069fbf3a8107c07fcd207e"
     },
     "firecrawl_extract_status": {
       "service": "firecrawl",
-      "sha256": "98482dfd0328415b7859d084a28b5dfca99d93719197ea59882fcac40d34c31d"
+      "sha256": "c4028248bed089a79deb4e9ab6ad5148b08829945973125239b116c9f3677501"
     },
     "firecrawl_scrape": {
       "service": "firecrawl",
-      "sha256": "06bda4a3d965fc49f697184dbc47bff5c2a573a36dd5dcb14fd3e41d4a29392e"
+      "sha256": "ef0d5916495b9516939f547e44e215267d40448b6f2d766e21954915c3e9e33c"
     },
     "firecrawl_scrape_status": {
       "service": "firecrawl",
-      "sha256": "1d0295d32160cb69944e3030596a38333f01cf8947a2c1702100b466c28aaac8"
+      "sha256": "f5bca7f426405fd6911c2feec461e0fe158d1f1ebc949af401cce9972f2d3402"
     },
     "firecrawl_search": {
       "service": "firecrawl",
-      "sha256": "ec1a79b66e620a79db4ff1591d2d46d984bf0d393f0e448c074389d39a7a47b8"
+      "sha256": "24abb300b2bd096a901896c3873942d033a8b6bd30e00bfda262e9a151bc0fd5"
     },
     "ipapi_check_worker_egress": {
       "service": "ipapi",
-      "sha256": "ab70f1305645fbf3f837b2396bcf78692c19b135751f824df8cb985a2363c300"
+      "sha256": "d3ab16e7f4dfa4904ddadbd59afaf5b6aa1d343ea7cde88c7428cbbf1c59145a"
     },
     "ipapi_lookup": {
       "service": "ipapi",
-      "sha256": "1d41e60461acd153ee6e3c133ced4d539ad393f9781292c1d5a87b3504f54faa"
+      "sha256": "46a0b4e3c015c6b70d8cefec97c4383ea02b105b19611b92e52b7dd0ddf464a1"
     },
     "keypool_profile": {
       "service": null,
-      "sha256": "4f9769022f8f2872af09d34e6afcdaefb51a7eac227fbe1b5e08b7cbcb8d3114"
+      "sha256": "a75a2be61638e7c6885fe6960746530f5a6ab65e92f806c22517122e4656704b"
     },
     "opensubtitle_download_subtitle": {
       "service": "opensubtitle",
-      "sha256": "7c01967cd754783e1e4cac31b2494f38dbf542c4414a46941a60f8f68cdcacd0"
+      "sha256": "d551dee2f5dfbdfb119e9316c5a23da12535dd5dcf4ed5c4a7c251134b7c9979"
     },
     "opensubtitle_search_subtitles": {
       "service": "opensubtitle",
-      "sha256": "138845d8894cad64987af045cfa76b16835953c563a05b8e6d2421b3020a85b8"
+      "sha256": "4279dc3935dc912a5d8f6cbe6c315949ba77572403ff927e5fead74952235c3d"
     },
     "positionstack_forward": {
       "service": "positionstack",
-      "sha256": "30986daa9079e1a8d5c713034cc99b914c1bcd24d82bc67fd2376762cc537b1a"
+      "sha256": "809b9176e630baf0310b050adcbde82912e833bef005e14dd5a2d6611480f3b5"
     },
     "positionstack_forward_batch": {
       "service": "positionstack",
-      "sha256": "89fbac4d7262416139239737d4e29e1687b4c03cb4a177d50f3381f13b878c9b"
+      "sha256": "4d5138167cd603d842bed800d8e7531729b47a01e5a39a366148184b25d87d56"
     },
     "positionstack_reverse": {
       "service": "positionstack",
-      "sha256": "2e19a4fd9271675da62848444f409141f4c96c523652f5b2baebb23d78c5809c"
+      "sha256": "e093ac124283156e97d6be74090496d34a5ffb5929eb7812146530b1d047cfda"
     },
     "positionstack_reverse_batch": {
       "service": "positionstack",
-      "sha256": "05783edbdfa51ad5e7aff51247a2269d68de7371b79ef50b08bcdf1ee870b896"
+      "sha256": "7edf015467515aff2b33687cc938e9626fcbfab94cc800a877d3ca9ed8e15943"
     },
     "scrapestack_get": {
       "service": "scrapestack",
-      "sha256": "0d5135924630687c9278a6b9465b902d2f9194562f44e8486d6e48e10eeb1cb1"
+      "sha256": "5e3a6a9143fe31f88e2f9775bc4d6a99e0d2fb4c183ebce4f3fbf8bb4449da9c"
     },
     "scrapestack_post": {
       "service": "scrapestack",
-      "sha256": "b4c9b68258681749c7ff70df366c2a4f916aa3330dd21b0fd035ab3777c39a3d"
+      "sha256": "aacd5ae184a62f191457e1e387e55e773f875f5d8092861ef1b30718da281d4d"
     },
     "serper_search": {
       "service": "serper",
-      "sha256": "183a32e0e9e61e52a8d3b872ca2d15db84c820c1aff8d4aae887ec1554efeaf0"
+      "sha256": "97b2b72eadbae388d9b499ebaabee26dbdd5529a7a7cb1f099dec96baa765dd4"
     },
     "subdl_download_subtitle": {
       "service": "subdl",
-      "sha256": "c571fbbe85bb6f921b742b78985bc54811c97c8c225835547e567878a11028e5"
+      "sha256": "35a396b80a29784817cce391bb9ecc50c4a4a54d29274ef18bf5262714f2639b"
     },
     "subdl_search_subtitles": {
       "service": "subdl",
-      "sha256": "d7ee40c78cd40af393aac4627bd2061359501f8399338cdc49cdc6efb62ec82c"
+      "sha256": "4c81dc3585c8512a39921415207abe05518741ff133c2336c1f93cbbf7be7915"
     },
     "tavily_extract": {
       "service": "tavily",
-      "sha256": "daf2cc38f6415e4365928f848a4e33436c4daddfa58eb15f6cd4ee846574ad64"
+      "sha256": "1ef2dbb0668bff60311a11d4611af59e6e2f0994b46886c0886ee4451266197f"
     },
     "tavily_search": {
       "service": "tavily",
-      "sha256": "d09823703efaea1fb076ff7c6488c6cf6596766557a6bbee4387a1724fb9c9a8"
+      "sha256": "f2b9ce8596bd66e1fcd9f9143a7580720757172b9e692b243a011eeb8cc3de3f"
     },
     "weatherstack_autocomplete": {
       "service": "weatherstack",
-      "sha256": "ac7f439c9757a4ea1dd5a2900d42542d14f0aa77c931e62f79b70deee6a328a8"
+      "sha256": "842d4803ff3684bc48ac4c9e65b6852c3b63a1a9e0b7121b2d8e15cf74533e2b"
     },
     "weatherstack_current": {
       "service": "weatherstack",
-      "sha256": "babde2eb2c81ba262a529e8d486192423097b5c68b70e5d40d94710759dde095"
+      "sha256": "f857f54635b379227e65094e7a931525625117e6e6745773cbfd7fb556e556a5"
     },
     "weatherstack_forecast": {
       "service": "weatherstack",
-      "sha256": "f807032f7cf21f49b776657cec2128f98612fb4bc9185582ec4b5754d0faa793"
+      "sha256": "d302bbd8d9a3237fa8c7991e078ec8ea905febc6fb4c91898e87d4b6f9c441a0"
     },
     "weatherstack_historical": {
       "service": "weatherstack",
-      "sha256": "c8488963c69079c4d08d758bbdd2081f7b9d99aa3c73952451953c3ddeec89a6"
+      "sha256": "08d8ec3829e35b9deb3e23d997f511bed4c24f7c6254618fd5156e15cef2049f"
     },
     "weatherstack_marine": {
       "service": "weatherstack",
-      "sha256": "69cf34b14b1c6777c887d2dad2080e024da1bafc9bc353007a019dffd8a1e7c1"
+      "sha256": "afa3c7c34dddf627953e2fedebf3230d5e16cb17a09698f75931fd38379ee731"
     },
     "weatherstack_past_marine": {
       "service": "weatherstack",
-      "sha256": "33b7b5f9172f0c78a2389a762c1490bf607901319f2f05843f38799de6edf4d4"
+      "sha256": "22dd37061bcbb303adc0e3ee320a21a4fd7314d68e6cea6f2a827e58e38289b3"
     }
   },
-  "version": "0.1.2"
+  "version": "0.1.3"
 }
