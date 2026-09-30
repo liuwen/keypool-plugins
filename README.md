@@ -39,7 +39,6 @@ Refresh the marketplace and reinstall the plugin to pick up a new bundle version
 
 ```sh
 codex plugin marketplace upgrade keypool-team
-codex plugin remove keypool@keypool-team
 codex plugin add keypool@keypool-team
 ```
 
