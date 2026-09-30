@@ -1,0 +1,12 @@
+{
+  "name": "keypool-team",
+  "interface": { "displayName": "KeyPool team" },
+  "plugins": [
+    {
+      "name": "keypool",
+      "source": { "source": "local", "path": "./plugins/keypool" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

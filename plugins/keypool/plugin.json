@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "keypool",
+  "version": "0.1.1",
+  "description": "Search, extract, synthesize speech, download subtitles, and query data through your KeyPool account.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KeyPool",
+        "shortDescription": "Search, speech, subtitles, and data tools",
+        "defaultPrompt": ["Use KeyPool to search the web and extract the sources.", "Use KeyPool to find and download subtitles."]
+      }
+    }
+  }
+}
