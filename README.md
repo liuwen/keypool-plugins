@@ -13,7 +13,7 @@ Start a new Codex chat after installation. The MCP server is `https://keypool.wh
 
 ## Available services
 
-The plugin covers 13 services and up to 44 provider tools, plus a KeyPool profile tool. The connected account sees only its authorized services and tools.
+The plugin covers 13 services and up to 33 provider tools, plus a KeyPool profile tool. The connected account sees only its authorized services and tools.
 
 | Purpose | Services |
 | --- | --- |
@@ -23,13 +23,15 @@ The plugin covers 13 services and up to 44 provider tools, plus a KeyPool profil
 | Subtitle search and download | SubDL, OpenSubtitles |
 | Data and page scraping | Weatherstack, IPAPI, Aviationstack, Positionstack, Scrapestack |
 
+Weatherstack, IPAPI, Aviationstack, Positionstack and Scrapestack use **Free-tier credentials only**. Available operations are current weather, single-IP location, current flights plus reference lists, single geocoding in default JSON, and basic GET page retrieval without JavaScript rendering. Paid features are unavailable. Current provider plans publish 100 included requests per month per upstream account for non-commercial use; this does not promise a combined pool budget or remaining quota. See the bundled [data reference](plugins/keypool/skills/keypool/references/data.md) for service limits and official sources.
+
 The bundled `keypool` skill explains provider selection, job polling, source attribution, and private file downloads. Provider quota and plan restrictions still apply.
 
 ## Hosting and authentication
 
 This repository is a public catalog and plugin package. It contains no credential values, Worker deployment configuration, or server runtime code. Cloudflare hosts the MCP server and OAuth consent flow. Public access to these files does not grant permission to run tools; each connection needs a valid KeyPool team token and selected service scopes.
 
-The current package is version `0.1.3`. `release.json` records its file, skill-resource, and tool-contract hashes. The release provides `keypool-portable.zip` and `keypool-agents-api.zip`. The Agents API route requires the calling application to complete KeyPool OAuth and supply a short-lived MCP access token as `KEYPOOL_MCP_ACCESS_TOKEN`; the parent team token is not an MCP bearer token. The export format has been checked locally; a live Agents API session has not been tested. See the [Agents API plugin guide](https://developers.openai.com/api/docs/guides/agents-api/tools/plugins) for loading the ZIP.
+The current package is version `0.1.4`. `release.json` records its file, skill-resource, and tool-contract hashes. The release provides `keypool-portable.zip` and `keypool-agents-api.zip`. The Agents API route requires the calling application to complete KeyPool OAuth and supply a short-lived MCP access token as `KEYPOOL_MCP_ACCESS_TOKEN`; the parent team token is not an MCP bearer token. The export format has been checked locally; a live Agents API session has not been tested. See the [Agents API plugin guide](https://developers.openai.com/api/docs/guides/agents-api/tools/plugins) for loading the ZIP.
 
 Access is distributed by the operator; there are no payments or public self-service enrollment. See [support](docs/SUPPORT.md), [privacy](docs/PRIVACY.md), and [terms](docs/TERMS.md).
 
@@ -74,7 +76,7 @@ The private package omits both MCP configuration files, uses an app reference, a
 
 The private skill package reuses the existing app's connection and permissions. Each account needs its own accessible app and private plugin; another person's private plugin link does not grant access. Keep the original registered app connected. Account-specific bindings are not published here.
 
-Version 0.1.3 was verified in a fresh ChatGPT web Work chat after personal-token reconnection and **Refresh tools**: it loaded the current skill and called `keypool_profile` once, returning 13 authorized services and 44 provider tools. It correctly explained subtitle download identifiers, Worker-egress IP and fixed speech formats without provider probes or file creation. The owner previously tested the private plugin in native ChatGPT mobile on version 0.1.2 with six services; the new personal connection has not been independently retested on mobile. These checks apply to that account and connection. To qualify another account or client version, select KeyPool workflows in a new Work chat and request `keypool_profile`; confirm the skill and actual tool result. See [OpenAI's supported plugin surfaces](https://developers.openai.com/codex/plugins).
+Version 0.1.4 was verified in a fresh ChatGPT web Work chat after **Refresh tools**: the bundled skill and data reference loaded, `keypool_profile` ran once and returned 13 authorized services and 33 provider tools. The response correctly limited all five APILayer services to the configured Free operations and explained the per-account allowance, unknown remaining quota, egress-IP perspective and unavailable forecast/batch/rendering features. No provider operations or file creation were used. The owner previously tested native mobile on version 0.1.2; version 0.1.4 has not been independently retested on mobile. These checks apply to that account and connection. To qualify another account/client, use a new Work chat and check the actual profile and skill guidance. See [OpenAI's supported plugin surfaces](https://developers.openai.com/codex/plugins).
 
 An existing Codex marketplace installation can stay installed. It shares the canonical skill and backend with the private ChatGPT package, while each client keeps its own installation. In ChatGPT, select KeyPool workflows and keep the original KeyPool app connected as its dependency. If both variants appear in one client, select one for a chat to avoid duplicate instructions or tool choices.
 
@@ -84,7 +86,7 @@ Public ChatGPT directory distribution requires a separate verified publisher sub
 
 All 13 services, including SubDL, OpenSubtitles and the five APIlayer data/scraping services, remain in the catalog. `keypool_profile` reports the intersection of active services, current parent team-token policy and OAuth-selected service scopes. Its count excludes the profile tool and does not prove provider health or plan access.
 
-In ChatGPT Settings, open the connected KeyPool account's **Actions → Reconnect**. Use your own operator-issued team token on KeyPool consent and check the desired service boxes; reconnect can preselect only the previous six. A shell variable may contain a restricted or shared-context token. A revoked token cannot be recovered from the database, which stores hashes; contact the operator for personal-token recovery. Never paste it in chat. Start a fresh chat and check the profile once; full access reports 13 services and 44 provider tools.
+In ChatGPT Settings, open the connected KeyPool account's **Actions → Reconnect**. Use your own operator-issued team token on KeyPool consent and check the desired service boxes; reconnect can preselect only the previous six. A shell variable may contain a restricted or shared-context token. A revoked token cannot be recovered from the database, which stores hashes; contact the operator for personal-token recovery. Never paste it in chat. Start a fresh chat and check the profile once; full access reports 13 services and 33 provider tools.
 
 Complete consent within ten minutes in the browser/profile where reconnect opened it. The form requires its secure browser cookie. If it reports that authorization was not started in this browser, or has expired/already been used, start again from **Reconnect**; do not reuse the old form or copy its URL into another browser. See [Cloudflare consent transactions](https://github.com/cloudflare/workers-oauth-provider/blob/main/docs/upstream-sign-in.md).
 

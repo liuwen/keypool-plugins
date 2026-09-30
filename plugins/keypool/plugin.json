@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "keypool",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Search, extract, synthesize speech, download subtitles, and query data through your KeyPool account.",
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "KeyPool",
         "shortDescription": "Search, speech, and data",
-        "longDescription": "Use your owner-issued KeyPool account to search and extract web sources, generate speech, find and download subtitles, and query supported data services. The bundled skill guides provider selection, bounded requests, job polling, source attribution, and private file delivery. Only services authorized for your account are available. Connect through KeyPool OAuth by entering your team token on KeyPool's consent page, never in chat. Access is issued by the operator; installing the public plugin does not create an account or grant provider access. No payments or public self-service enrollment are offered. Provider quota and plan restrictions apply.",
+        "longDescription": "Use your owner-issued KeyPool account to search and extract web sources, generate speech, find and download subtitles, and query supported data services. The bundled skill guides provider selection, bounded requests, job polling, source attribution, and private file delivery. Only services authorized for your account are available. Connect through KeyPool OAuth by entering your team token on KeyPool's consent page, never in chat. Access is issued by the operator; installing the public plugin does not create an account or grant provider access. No payments or public self-service enrollment are offered. Weatherstack, IPAPI, Aviationstack, Positionstack and Scrapestack use Free-tier credentials only, with a limited operation set and small monthly allowances. Provider quota and plan restrictions apply.",
         "developerName": "WEN LIU",
         "category": "Productivity",
         "websiteURL": "https://github.com/liuwen/keypool-plugins",

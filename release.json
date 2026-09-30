@@ -2,67 +2,55 @@
   "files": {
     "assets/icon.png": "a2e208a46e53ab27fb4304fb727f1859732e3923d5c52099f8fba4e4c73cce21",
     "mcp.json": "c11cdeede75b6d37c70df965f7ac2855c4d2794aa2d5a465e6858748c2b8c812",
-    "plugin.json": "e62789f1c7a40281dc91e340be5568174042a099fb68f9d3367004101be3ba32",
-    "skills/keypool/SKILL.md": "781d165f7e7639c022e20aedd9b106a997680cc91489d2a4508f75bbf13fbdd2",
+    "plugin.json": "74823a411c7e4cd9f6ed57a2c482c39f6355eb492ccec763168e8b0b8b7b4bae",
+    "skills/keypool/SKILL.md": "38aed83dae4215497f326848574314406954cec117a66c0e20a035857e79726e",
     "skills/keypool/agents/openai.yaml": "8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
-    "skills/keypool/references/data.md": "893da59f3003f33c408ce099af8b83425156f680046d0e78350b25cc86dbfb2a",
+    "skills/keypool/references/data.md": "bed641b052616541ea2ba807eb6e55ad3459a1729d6bda047f2cce5a40596178",
     "skills/keypool/references/media.md": "bdb460197e9fd5228f3d3c29c8aca3a53ff184b1d442c07fa0bcb996b1b2e37c",
     "skills/keypool/references/search.md": "ea6d6170ec6fd59639c482c80909d232fc763a03fa3720cf00ad4bd3cd5dcb24"
   },
   "mcp_url": "https://keypool.whatsinfor.me/mcp",
   "name": "keypool",
-  "provider_tool_count": 44,
+  "provider_tool_count": 33,
   "skill_resources": {
-    "skill://keypool/keypool/SKILL.md": "sha256:781d165f7e7639c022e20aedd9b106a997680cc91489d2a4508f75bbf13fbdd2",
+    "skill://keypool/keypool/SKILL.md": "sha256:38aed83dae4215497f326848574314406954cec117a66c0e20a035857e79726e",
     "skill://keypool/keypool/agents/openai.yaml": "sha256:8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
-    "skill://keypool/keypool/references/data.md": "sha256:893da59f3003f33c408ce099af8b83425156f680046d0e78350b25cc86dbfb2a",
+    "skill://keypool/keypool/references/data.md": "sha256:bed641b052616541ea2ba807eb6e55ad3459a1729d6bda047f2cce5a40596178",
     "skill://keypool/keypool/references/media.md": "sha256:bdb460197e9fd5228f3d3c29c8aca3a53ff184b1d442c07fa0bcb996b1b2e37c",
     "skill://keypool/keypool/references/search.md": "sha256:ea6d6170ec6fd59639c482c80909d232fc763a03fa3720cf00ad4bd3cd5dcb24"
   },
   "tools": {
     "aviationstack_aircraft_types": {
       "service": "aviationstack",
-      "sha256": "c56eaa0e975288fd53337dd52ae6b9f3247f0f13c29c7de123db7e51d6be3a5a"
+      "sha256": "da34c3016de6943d9c9227616e4fca02a97118fa3582aa0079ef55c401507a4c"
     },
     "aviationstack_airlines": {
       "service": "aviationstack",
-      "sha256": "17b0aba537011446a4a97cebc3d44793c1f3398142992deff38ebe375d75439a"
+      "sha256": "d86618447996576c54b9659b45fd4d7271a1237b6d98eb0897d72da2736a5560"
     },
     "aviationstack_airplanes": {
       "service": "aviationstack",
-      "sha256": "1e511a484715b7f1b5b40b48bb0a1913abb8bc3e046b4c1f169b160090642ca5"
+      "sha256": "97a7dd52b1a73b891e000429e64fad8443c7af7c8c5eff8327eeab220e851d9b"
     },
     "aviationstack_airports": {
       "service": "aviationstack",
-      "sha256": "58f36a1e0e37649fd41643a95a60a2c5b7344ac1847930d704cb113c024b12c9"
+      "sha256": "bf335932e518bde5c907f360a7fe7a1faf7d49016f981c906890012ad813a2e2"
     },
     "aviationstack_cities": {
       "service": "aviationstack",
-      "sha256": "d1cb9b00bd672befebd3e6baef97ddfdcccb8011e5ae1b8e3955ab61fff01c95"
+      "sha256": "f5255dc6a8adf58c3e48a106fc2963bebe6bb27299d8be57a58a7c557cdd9540"
     },
     "aviationstack_countries": {
       "service": "aviationstack",
-      "sha256": "c19266ca54dca4b3e98c007ce4deeee4de927ee17033fdd9d89b13746e0a63b3"
+      "sha256": "b3997c687994ea8282a1d6d7efdae1cac0e02de8237b34bd501bb7f5c0bd3254"
     },
     "aviationstack_flights": {
       "service": "aviationstack",
-      "sha256": "1ac7fdc8f1d46934399c394b64285dba7993b1e963c905826c07d79e2f9692cf"
-    },
-    "aviationstack_future_flights": {
-      "service": "aviationstack",
-      "sha256": "7de512a2fb5400566263132ac3bb1599c1121f900fecf6753e381b93b40565fb"
-    },
-    "aviationstack_routes": {
-      "service": "aviationstack",
-      "sha256": "a8f7fc4ccac7f8aeee7a4d58be5f63438dc70de9ecc954e11a7062c03828b68f"
+      "sha256": "1388dfc9b70d383373d81debabc7f6a8188df651780753ad0cf206ed4bcb3bdc"
     },
     "aviationstack_taxes": {
       "service": "aviationstack",
-      "sha256": "28db109c26b2617de3bd9a1736cff2541cee12cafc33a6d9c510e75379baa16a"
-    },
-    "aviationstack_timetable": {
-      "service": "aviationstack",
-      "sha256": "9daf61bb1fec3193dce3e407782871a59883fe087c39254f46029721f4dcc472"
+      "sha256": "6dcaa9a4a5640d5a1bb9cc4d42f6190d129dbfd7d9713fd0d07312d1da55f989"
     },
     "cartesia_list_voices": {
       "service": "cartesia",
@@ -114,11 +102,11 @@
     },
     "ipapi_check_worker_egress": {
       "service": "ipapi",
-      "sha256": "d3ab16e7f4dfa4904ddadbd59afaf5b6aa1d343ea7cde88c7428cbbf1c59145a"
+      "sha256": "5d0b947e13fdec16905564a2eeb0f11f8cb2201e2dc80fb8de713e56fcca86b9"
     },
     "ipapi_lookup": {
       "service": "ipapi",
-      "sha256": "46a0b4e3c015c6b70d8cefec97c4383ea02b105b19611b92e52b7dd0ddf464a1"
+      "sha256": "b3ad7ad73b8aa2845c983118931fac6220e9d93b8e4c83d9684c1c1c25eb53a9"
     },
     "keypool_profile": {
       "service": null,
@@ -134,27 +122,15 @@
     },
     "positionstack_forward": {
       "service": "positionstack",
-      "sha256": "809b9176e630baf0310b050adcbde82912e833bef005e14dd5a2d6611480f3b5"
-    },
-    "positionstack_forward_batch": {
-      "service": "positionstack",
-      "sha256": "4d5138167cd603d842bed800d8e7531729b47a01e5a39a366148184b25d87d56"
+      "sha256": "cd0250579741645f1b85f56418782032e1f262abd7e96e1c031f1770cb3426ce"
     },
     "positionstack_reverse": {
       "service": "positionstack",
-      "sha256": "e093ac124283156e97d6be74090496d34a5ffb5929eb7812146530b1d047cfda"
-    },
-    "positionstack_reverse_batch": {
-      "service": "positionstack",
-      "sha256": "7edf015467515aff2b33687cc938e9626fcbfab94cc800a877d3ca9ed8e15943"
+      "sha256": "7ac1d44cde37e883ce0c3f82f3b16bc6828826b31930d78d385cf721a325ed89"
     },
     "scrapestack_get": {
       "service": "scrapestack",
-      "sha256": "5e3a6a9143fe31f88e2f9775bc4d6a99e0d2fb4c183ebce4f3fbf8bb4449da9c"
-    },
-    "scrapestack_post": {
-      "service": "scrapestack",
-      "sha256": "aacd5ae184a62f191457e1e387e55e773f875f5d8092861ef1b30718da281d4d"
+      "sha256": "7c8cbf563fca8a5933ebf97bea2fa5221a82ff14b76406d328cd0df6d5589c30"
     },
     "serper_search": {
       "service": "serper",
@@ -176,30 +152,10 @@
       "service": "tavily",
       "sha256": "f2b9ce8596bd66e1fcd9f9143a7580720757172b9e692b243a011eeb8cc3de3f"
     },
-    "weatherstack_autocomplete": {
-      "service": "weatherstack",
-      "sha256": "842d4803ff3684bc48ac4c9e65b6852c3b63a1a9e0b7121b2d8e15cf74533e2b"
-    },
     "weatherstack_current": {
       "service": "weatherstack",
-      "sha256": "f857f54635b379227e65094e7a931525625117e6e6745773cbfd7fb556e556a5"
-    },
-    "weatherstack_forecast": {
-      "service": "weatherstack",
-      "sha256": "d302bbd8d9a3237fa8c7991e078ec8ea905febc6fb4c91898e87d4b6f9c441a0"
-    },
-    "weatherstack_historical": {
-      "service": "weatherstack",
-      "sha256": "08d8ec3829e35b9deb3e23d997f511bed4c24f7c6254618fd5156e15cef2049f"
-    },
-    "weatherstack_marine": {
-      "service": "weatherstack",
-      "sha256": "afa3c7c34dddf627953e2fedebf3230d5e16cb17a09698f75931fd38379ee731"
-    },
-    "weatherstack_past_marine": {
-      "service": "weatherstack",
-      "sha256": "22dd37061bcbb303adc0e3ee320a21a4fd7314d68e6cea6f2a827e58e38289b3"
+      "sha256": "1abf2d528a7f1ed7804e00eda49c3298e01be337c58d8cd39e6345266964bccc"
     }
   },
-  "version": "0.1.3"
+  "version": "0.1.4"
 }

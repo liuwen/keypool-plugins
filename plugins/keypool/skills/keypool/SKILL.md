@@ -18,11 +18,13 @@ Preserve a provider named by the user. When none is named, match the task to an 
 | Structured page extraction | `firecrawl_extract`, then `firecrawl_extract_status` if a job is returned; [search](references/search.md) |
 | Text to speech | Cartesia voice discovery and synthesis, or Deepgram TTS model discovery and synthesis; [media](references/media.md) |
 | Find and download subtitles | SubDL search then download by returned KeyPool path, or OpenSubtitles search then download by returned file ID; [media](references/media.md) |
-| Weather and marine conditions | The matching `weatherstack_*` current, forecast, history, or marine tool; [data](references/data.md) |
-| Explicit IP/domain lookup | `ipapi_lookup`; [data](references/data.md) |
-| Flights, timetables, routes, aviation reference data | The matching `aviationstack_*` tool; [data](references/data.md) |
+| Current weather for one location | `weatherstack_current`; [data](references/data.md) |
+| Single explicit IP location lookup | `ipapi_lookup`; [data](references/data.md) |
+| Current flights and aviation reference lists | The matching `aviationstack_*` tool; [data](references/data.md) |
 | Address to coordinates or coordinates to place | `positionstack_forward` or `positionstack_reverse`; [data](references/data.md) |
-| Retrieve specified page HTML | `scrapestack_get`; use `scrapestack_post` only when that provider request method is required; [data](references/data.md) |
+| Retrieve specified page HTML | `scrapestack_get`; [data](references/data.md) |
+
+The configured Weatherstack, IPAPI, Aviationstack, Positionstack and Scrapestack credentials are **Free tier only**. Use only their exposed Free operations. Paid features are unavailable; installing the plugin or seeing a service in the profile does not add entitlements. Each provider currently publishes 100 included monthly requests per upstream account for non-commercial use; this is not a pooled quota promise or proof of remaining allowance. Read [data](references/data.md) before those requests.
 
 ## Execute and report
 
