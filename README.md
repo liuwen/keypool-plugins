@@ -86,6 +86,8 @@ All 13 services, including SubDL, OpenSubtitles and the five APIlayer data/scrap
 
 In ChatGPT Settings, open the connected KeyPool account's **Actions → Reconnect**. Use your own operator-issued team token on KeyPool consent and check the desired service boxes; reconnect can preselect only the previous six. A shell variable may contain a restricted or shared-context token. A revoked token cannot be recovered from the database, which stores hashes; contact the operator for personal-token recovery. Never paste it in chat. Start a fresh chat and check the profile once; full access reports 13 services and 44 provider tools.
 
+Complete consent within ten minutes in the browser/profile where reconnect opened it. The form requires its secure browser cookie. If it reports that authorization was not started in this browser, or has expired/already been used, start again from **Reconnect**; do not reuse the old form or copy its URL into another browser. See [Cloudflare consent transactions](https://github.com/cloudflare/workers-oauth-provider/blob/main/docs/upstream-sign-in.md).
+
 ## Keeping versions aligned
 
 Install the matching release and rebuild your private variant after a skill update. The backend uses this package's version and serves identical canonical skill resources over MCP. Maintainer checks compare every skill digest, the account-filtered tool schemas, and the server version against `release.json` before publishing marketplace changes.
