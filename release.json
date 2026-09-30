@@ -1,0 +1,205 @@
+{
+  "files": {
+    "assets/icon.png": "a2e208a46e53ab27fb4304fb727f1859732e3923d5c52099f8fba4e4c73cce21",
+    "mcp.json": "c11cdeede75b6d37c70df965f7ac2855c4d2794aa2d5a465e6858748c2b8c812",
+    "plugin.json": "e6026fd41649c44a36d46a41b41acfb60af1ea09e73ba437b88925791a8a32e9",
+    "skills/keypool/SKILL.md": "de797330c8a87461b44257b48e1c382a52239d3fe6e2a31ea8dede01b79c4e04",
+    "skills/keypool/agents/openai.yaml": "8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
+    "skills/keypool/references/data.md": "af1a4c8bca07e30d42fe418284b2a4e833697c6a2e6ed67829deb65f16fe728b",
+    "skills/keypool/references/media.md": "acd8955b3a829436039834c0779625730ffc9dd2e5c85a08208012bf07d3c44f",
+    "skills/keypool/references/search.md": "d2bae563694b61fe716b44ff3a9a343b08b84c2df6bb75034e929845c632d3bc"
+  },
+  "mcp_url": "https://keypool.whatsinfor.me/mcp",
+  "name": "keypool",
+  "provider_tool_count": 44,
+  "skill_resources": {
+    "skill://keypool/keypool/SKILL.md": "sha256:de797330c8a87461b44257b48e1c382a52239d3fe6e2a31ea8dede01b79c4e04",
+    "skill://keypool/keypool/agents/openai.yaml": "sha256:8fb95e16f28bbf9d364067b53b00447f44027d6428577a24e444f763ff69ec57",
+    "skill://keypool/keypool/references/data.md": "sha256:af1a4c8bca07e30d42fe418284b2a4e833697c6a2e6ed67829deb65f16fe728b",
+    "skill://keypool/keypool/references/media.md": "sha256:acd8955b3a829436039834c0779625730ffc9dd2e5c85a08208012bf07d3c44f",
+    "skill://keypool/keypool/references/search.md": "sha256:d2bae563694b61fe716b44ff3a9a343b08b84c2df6bb75034e929845c632d3bc"
+  },
+  "tools": {
+    "aviationstack_aircraft_types": {
+      "service": "aviationstack",
+      "sha256": "552b094ec94a19756c161be2b4e2f093de8625ee826aee271481a5ed3dc880b4"
+    },
+    "aviationstack_airlines": {
+      "service": "aviationstack",
+      "sha256": "4a224d33e3e928f2f8f7a12ec3de04d87e2331b0e591269f9ab1afe36cc941cb"
+    },
+    "aviationstack_airplanes": {
+      "service": "aviationstack",
+      "sha256": "81e8bc3515e1395891f3ee4b6138441a4759d4f2b2390bc26e9cace76488dcbe"
+    },
+    "aviationstack_airports": {
+      "service": "aviationstack",
+      "sha256": "7a470e70ab5d55af0d58972d3603a6cb1985591078ea7e1b9fb493a24b999504"
+    },
+    "aviationstack_cities": {
+      "service": "aviationstack",
+      "sha256": "c6e45d1d94bea1b66d8fa9d55c19f2faf046175b19d9f8f423ace6087fa5a4d3"
+    },
+    "aviationstack_countries": {
+      "service": "aviationstack",
+      "sha256": "410cc08b073c63c02f808912487a743f706aa876c2d28eea5f4de7d64602cbb3"
+    },
+    "aviationstack_flights": {
+      "service": "aviationstack",
+      "sha256": "20377b3289bd3b0e1d6962ed883fbd228b75272a6218dd92a396b0e4e5e1305f"
+    },
+    "aviationstack_future_flights": {
+      "service": "aviationstack",
+      "sha256": "ca554ff1332a4f057b887d48693757caa9730983878b7522c7055eefd641dfc3"
+    },
+    "aviationstack_routes": {
+      "service": "aviationstack",
+      "sha256": "9a1b72f56b4963e90740495ae3ac18585d9e9f64c789a31578e80948b1ae6b40"
+    },
+    "aviationstack_taxes": {
+      "service": "aviationstack",
+      "sha256": "4e1d08d33e1c8cd1ae2d2d5befcbb501e8b57456eb975683639cbf34b6a84273"
+    },
+    "aviationstack_timetable": {
+      "service": "aviationstack",
+      "sha256": "7bd7b661398ed12e67177991206bdf70ba087541ac05404942ea735d59fb31e8"
+    },
+    "cartesia_list_voices": {
+      "service": "cartesia",
+      "sha256": "1f38cbe4b148132ccb7502d63bd75b9d7d1f6ccc2ceca8d8f7e1ba27ec4e9d7a"
+    },
+    "cartesia_synthesize_speech": {
+      "service": "cartesia",
+      "sha256": "d7a98e40170de116ee56b665f662f6ad866d32d9ea5ea2dd30e156ba7564ca96"
+    },
+    "deepgram_list_models": {
+      "service": "deepgram",
+      "sha256": "bf99a7b1046113ec8f18d1bef009f586356c325e57cf8c97d17ddbd4e59d8fc1"
+    },
+    "deepgram_synthesize_speech": {
+      "service": "deepgram",
+      "sha256": "75a9e8ac24cd2325fb3ba4d888655f889a91a209cd36c4d30dcd14187ac0ebe7"
+    },
+    "exa_find_similar": {
+      "service": "exa",
+      "sha256": "2f634bccb045362805fd392a3ab3b0a3dbfa5e60f5d4cf1981ce2b39b8f56af2"
+    },
+    "exa_get_contents": {
+      "service": "exa",
+      "sha256": "7a794e82e4d43ddd67f197b931ea59403d1b1b3a151b14032bae25a8eaa78909"
+    },
+    "exa_search": {
+      "service": "exa",
+      "sha256": "ccb4d44565510423a971fd80aedbbfdb3f0a45c33c19a4335e8411e2135806d7"
+    },
+    "firecrawl_extract": {
+      "service": "firecrawl",
+      "sha256": "2a409009b62560d200680c93f2be366b1a8de97af10e5c6153b9452233b4bb29"
+    },
+    "firecrawl_extract_status": {
+      "service": "firecrawl",
+      "sha256": "98482dfd0328415b7859d084a28b5dfca99d93719197ea59882fcac40d34c31d"
+    },
+    "firecrawl_scrape": {
+      "service": "firecrawl",
+      "sha256": "06bda4a3d965fc49f697184dbc47bff5c2a573a36dd5dcb14fd3e41d4a29392e"
+    },
+    "firecrawl_scrape_status": {
+      "service": "firecrawl",
+      "sha256": "1d0295d32160cb69944e3030596a38333f01cf8947a2c1702100b466c28aaac8"
+    },
+    "firecrawl_search": {
+      "service": "firecrawl",
+      "sha256": "ec1a79b66e620a79db4ff1591d2d46d984bf0d393f0e448c074389d39a7a47b8"
+    },
+    "ipapi_check_worker_egress": {
+      "service": "ipapi",
+      "sha256": "ab70f1305645fbf3f837b2396bcf78692c19b135751f824df8cb985a2363c300"
+    },
+    "ipapi_lookup": {
+      "service": "ipapi",
+      "sha256": "1d41e60461acd153ee6e3c133ced4d539ad393f9781292c1d5a87b3504f54faa"
+    },
+    "keypool_profile": {
+      "service": null,
+      "sha256": "4f9769022f8f2872af09d34e6afcdaefb51a7eac227fbe1b5e08b7cbcb8d3114"
+    },
+    "opensubtitle_download_subtitle": {
+      "service": "opensubtitle",
+      "sha256": "7c01967cd754783e1e4cac31b2494f38dbf542c4414a46941a60f8f68cdcacd0"
+    },
+    "opensubtitle_search_subtitles": {
+      "service": "opensubtitle",
+      "sha256": "138845d8894cad64987af045cfa76b16835953c563a05b8e6d2421b3020a85b8"
+    },
+    "positionstack_forward": {
+      "service": "positionstack",
+      "sha256": "30986daa9079e1a8d5c713034cc99b914c1bcd24d82bc67fd2376762cc537b1a"
+    },
+    "positionstack_forward_batch": {
+      "service": "positionstack",
+      "sha256": "89fbac4d7262416139239737d4e29e1687b4c03cb4a177d50f3381f13b878c9b"
+    },
+    "positionstack_reverse": {
+      "service": "positionstack",
+      "sha256": "2e19a4fd9271675da62848444f409141f4c96c523652f5b2baebb23d78c5809c"
+    },
+    "positionstack_reverse_batch": {
+      "service": "positionstack",
+      "sha256": "05783edbdfa51ad5e7aff51247a2269d68de7371b79ef50b08bcdf1ee870b896"
+    },
+    "scrapestack_get": {
+      "service": "scrapestack",
+      "sha256": "0d5135924630687c9278a6b9465b902d2f9194562f44e8486d6e48e10eeb1cb1"
+    },
+    "scrapestack_post": {
+      "service": "scrapestack",
+      "sha256": "b4c9b68258681749c7ff70df366c2a4f916aa3330dd21b0fd035ab3777c39a3d"
+    },
+    "serper_search": {
+      "service": "serper",
+      "sha256": "183a32e0e9e61e52a8d3b872ca2d15db84c820c1aff8d4aae887ec1554efeaf0"
+    },
+    "subdl_download_subtitle": {
+      "service": "subdl",
+      "sha256": "c571fbbe85bb6f921b742b78985bc54811c97c8c225835547e567878a11028e5"
+    },
+    "subdl_search_subtitles": {
+      "service": "subdl",
+      "sha256": "d7ee40c78cd40af393aac4627bd2061359501f8399338cdc49cdc6efb62ec82c"
+    },
+    "tavily_extract": {
+      "service": "tavily",
+      "sha256": "daf2cc38f6415e4365928f848a4e33436c4daddfa58eb15f6cd4ee846574ad64"
+    },
+    "tavily_search": {
+      "service": "tavily",
+      "sha256": "d09823703efaea1fb076ff7c6488c6cf6596766557a6bbee4387a1724fb9c9a8"
+    },
+    "weatherstack_autocomplete": {
+      "service": "weatherstack",
+      "sha256": "ac7f439c9757a4ea1dd5a2900d42542d14f0aa77c931e62f79b70deee6a328a8"
+    },
+    "weatherstack_current": {
+      "service": "weatherstack",
+      "sha256": "babde2eb2c81ba262a529e8d486192423097b5c68b70e5d40d94710759dde095"
+    },
+    "weatherstack_forecast": {
+      "service": "weatherstack",
+      "sha256": "f807032f7cf21f49b776657cec2128f98612fb4bc9185582ec4b5754d0faa793"
+    },
+    "weatherstack_historical": {
+      "service": "weatherstack",
+      "sha256": "c8488963c69079c4d08d758bbdd2081f7b9d99aa3c73952451953c3ddeec89a6"
+    },
+    "weatherstack_marine": {
+      "service": "weatherstack",
+      "sha256": "69cf34b14b1c6777c887d2dad2080e024da1bafc9bc353007a019dffd8a1e7c1"
+    },
+    "weatherstack_past_marine": {
+      "service": "weatherstack",
+      "sha256": "33b7b5f9172f0c78a2389a762c1490bf607901319f2f05843f38799de6edf4d4"
+    }
+  },
+  "version": "0.1.2"
+}

@@ -1,6 +1,6 @@
 # KeyPool plugin
 
-KeyPool connects Codex to search, extraction, speech, subtitle, and data services through one authenticated MCP server. The plugin bundles one KeyPool skill and service references alongside the MCP connection.
+KeyPool connects ChatGPT and Codex to search, extraction, speech, subtitle, and data services through one authenticated MCP server. It is operated by WEN LIU. The plugin bundles one KeyPool skill and service references alongside the MCP connection.
 
 ## Install in Codex
 
@@ -29,7 +29,9 @@ The bundled `keypool` skill explains provider selection, job polling, source att
 
 This repository is a public catalog and plugin package. It contains no credential values, Worker deployment configuration, or server runtime code. Cloudflare hosts the MCP server and OAuth consent flow. Public access to these files does not grant permission to run tools; each connection needs a valid KeyPool team token and selected service scopes.
 
-The current package is version `0.1.1`. Its matching GitHub release also provides `keypool.zip` for Agents API plugin loading. That route requires the calling application to complete KeyPool OAuth and supply a short-lived MCP access token as `KEYPOOL_MCP_ACCESS_TOKEN`; the parent team token is not an MCP bearer token. The export format has been checked locally; a live Agents API session has not been tested. See the [Agents API plugin guide](https://developers.openai.com/api/docs/guides/agents-api/tools/plugins) for loading the ZIP.
+The current package is version `0.1.2`. `release.json` records its file, skill-resource, and tool-contract hashes. The release provides `keypool-portable.zip` and `keypool-agents-api.zip`. The Agents API route requires the calling application to complete KeyPool OAuth and supply a short-lived MCP access token as `KEYPOOL_MCP_ACCESS_TOKEN`; the parent team token is not an MCP bearer token. The export format has been checked locally; a live Agents API session has not been tested. See the [Agents API plugin guide](https://developers.openai.com/api/docs/guides/agents-api/tools/plugins) for loading the ZIP.
+
+Access is distributed by the operator; there are no payments or public self-service enrollment. See [support](docs/SUPPORT.md), [privacy](docs/PRIVACY.md), and [terms](docs/TERMS.md).
 
 ## Update
 
@@ -43,10 +45,30 @@ codex plugin add keypool@keypool-team
 
 Start a new Codex chat after updating.
 
-## ChatGPT web
+## ChatGPT web and mobile
 
 Adding this GitHub marketplace to Codex does not register a ChatGPT web plugin. A registered KeyPool MCP app can already supply tools on the web at `https://keypool.whatsinfor.me/mcp`.
 
-To add the skill alongside that existing app, use a separate private package with the skill, its references, and a `.app.json` binding to the verified registered app ID. Its portable manifest references that file through `extensions.com.openai.apps`. This package must omit `mcp.json` and `.mcp.json`: ChatGPT marks imported packages with either MCP configuration as **Desktop only**, even for an HTTPS server. See [OpenAI's app-reference guide](https://learn.chatgpt.com/docs/enterprise/plugin-management#reference-an-existing-app-with-appjson).
+For an individual account, use a private plugin containing the same skill and a reference to your own registered KeyPool app:
 
-The private skill package reuses the existing app's connection and permissions. Each account needs access to the referenced app and must install the skill package. Account-specific app bindings are not published in this repository. Public ChatGPT directory distribution requires separate submission and publication.
+1. Register `https://keypool.whatsinfor.me/mcp` from ChatGPT's Plugins page in developer mode. Complete OAuth on KeyPool's consent page using your operator-issued team token.
+2. Open that app's details and obtain its exact app ID from the URL. An `asdk_app_...` ID is the `plugin_asdk_app_...` URL identifier with only the leading `plugin_` removed.
+3. Clone this repository and build the private package with that verified ID:
+
+   ```sh
+   python3 tools/build-plugin.py --chatgpt-app-id asdk_app_YOUR_VERIFIED_ID
+   ```
+
+4. In a ChatGPT Work chat, ask Plugin Creator to create a private plugin from the generated `dist/keypool-chatgpt/keypool-workflows.zip`. Install it and select **KeyPool workflows** with an @ mention in a new chat.
+
+The private package omits both MCP configuration files, uses an app reference, and keeps the skill and service references aligned with this release. See [OpenAI's app-reference guide](https://learn.chatgpt.com/docs/enterprise/plugin-management#reference-an-existing-app-with-appjson).
+
+The private skill package reuses the existing app's connection and permissions. Each account needs its own accessible app and private plugin; another person's private plugin link does not grant access. Keep the original registered app connected. Account-specific bindings are not published here.
+
+ChatGPT web has been tested with the private package. OpenAI documents plugins on supported mobile surfaces, but this private custom MCP connection has not been tested in a native mobile client. Do not treat a responsive browser test as mobile qualification. To check your account, select KeyPool workflows in a new mobile Work chat and ask which KeyPool services are available; the chat must load the skill and actually call `keypool_profile`.
+
+Public ChatGPT directory distribution requires a separate verified publisher submission. This repository is a public, self-distributed marketplace; it is not an approved OpenAI directory listing.
+
+## Keeping versions aligned
+
+Install the matching release and rebuild your private variant after a skill update. The backend uses this package's version and serves identical canonical skill resources over MCP. Maintainer checks compare every skill digest, the account-filtered tool schemas, and the server version against `release.json` before publishing marketplace changes.

@@ -1,14 +1,26 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "keypool",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Search, extract, synthesize speech, download subtitles, and query data through your KeyPool account.",
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "KeyPool",
-        "shortDescription": "Search, speech, subtitles, and data tools",
-        "defaultPrompt": ["Use KeyPool to search the web and extract the sources.", "Use KeyPool to find and download subtitles."]
+        "shortDescription": "Search, speech, and data",
+        "longDescription": "Use your owner-issued KeyPool account to search and extract web sources, generate speech, find and download subtitles, and query supported data services. The bundled skill guides provider selection, bounded requests, job polling, source attribution, and private file delivery. Only services authorized for your account are available. Connect through KeyPool OAuth by entering your team token on KeyPool's consent page, never in chat. Access is issued by the operator; installing the public plugin does not create an account or grant provider access. No payments or public self-service enrollment are offered. Provider quota and plan restrictions apply.",
+        "developerName": "WEN LIU",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/liuwen/keypool-plugins",
+        "supportURL": "https://github.com/liuwen/keypool-plugins/blob/main/docs/SUPPORT.md",
+        "privacyPolicyURL": "https://github.com/liuwen/keypool-plugins/blob/main/docs/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/liuwen/keypool-plugins/blob/main/docs/TERMS.md",
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png",
+        "defaultPrompt": [
+          "Use KeyPool to search the web and extract the sources.",
+          "Use KeyPool to find and download subtitles."
+        ]
       }
     }
   }

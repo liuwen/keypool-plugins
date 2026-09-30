@@ -7,6 +7,8 @@ Use the connected KeyPool MCP tools. Follow the user's explicit instructions whe
 
 Preserve a provider the user names. Exa, Tavily, Firecrawl, Serper, and Scrapestack have different semantics. If no provider is specified, choose the relevant available tool from its description. Do not silently switch services after a quota, permission, or plan error; explain the failure and offer a suitable alternative.
 
+Reuse the tool catalog already available in the chat. Call `keypool_profile` only when service access is unclear or has changed, rather than before every request. Read only the reference needed for the task. Start with a small result count, request page text only when needed, and avoid repeating a search whose results are already sufficient.
+
 - For search and extraction, read [references/search.md](references/search.md).
 - For speech and subtitles, read [references/media.md](references/media.md).
 - For weather, geocoding, aviation, IP, and scraping, read [references/data.md](references/data.md).
