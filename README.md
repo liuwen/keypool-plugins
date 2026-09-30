@@ -45,4 +45,8 @@ Start a new Codex chat after updating.
 
 ## ChatGPT web
 
-This GitHub marketplace installs the plugin in Codex. ChatGPT web needs separate registration of the plugin with its skill packaging or publication through the ChatGPT public directory. Adding this GitHub marketplace does not make ChatGPT web load it automatically. The MCP endpoint for that separate integration is `https://keypool.whatsinfor.me/mcp`.
+Adding this GitHub marketplace to Codex does not register a ChatGPT web plugin. A registered KeyPool MCP app can already supply tools on the web at `https://keypool.whatsinfor.me/mcp`.
+
+To add the skill alongside that existing app, use a separate private package with the skill, its references, and a `.app.json` binding to the verified registered app ID. Its portable manifest references that file through `extensions.com.openai.apps`. This package must omit `mcp.json` and `.mcp.json`: ChatGPT marks imported packages with either MCP configuration as **Desktop only**, even for an HTTPS server. See [OpenAI's app-reference guide](https://learn.chatgpt.com/docs/enterprise/plugin-management#reference-an-existing-app-with-appjson).
+
+The private skill package reuses the existing app's connection and permissions. Each account needs access to the referenced app and must install the skill package. Account-specific app bindings are not published in this repository. Public ChatGPT directory distribution requires separate submission and publication.
