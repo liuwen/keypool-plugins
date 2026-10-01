@@ -50,37 +50,73 @@ Start a new Codex chat after updating.
 
 | Client | Required pieces |
 | --- | --- |
-| ChatGPT web and native mobile | One registered KeyPool MCP app for OAuth/tools plus one private KeyPool workflows plugin for the skill/references. |
+| ChatGPT web | One combined KeyPool cloud plugin containing the connected app, canonical skill and references. |
+| ChatGPT native mobile | The same account plugin if available; qualify native skill/tool execution separately. |
 | Codex and ChatGPT desktop using the marketplace package | One KeyPool package containing the remote MCP connection and skill. |
 | Agents API application | The derived Agents API ZIP and application-managed OAuth onboarding/refresh. |
 
-Work is a ChatGPT mode. A web/mobile Work chat uses the app plus private plugin; it does not use the Codex GitHub installation. Each client keeps its own connection and installed bundle.
+Work is a ChatGPT mode. Each client keeps its own connection and installed bundle.
+Adding this GitHub marketplace to Codex does not install a ChatGPT web plugin.
 
-## ChatGPT web and mobile
+## ChatGPT web
 
-Adding this GitHub marketplace to Codex does not register a ChatGPT web plugin. A registered KeyPool MCP app can already supply tools on the web at `https://keypool.whatsinfor.me/mcp`.
+An account with app-package release controls can add the skill directly to its
+existing registered KeyPool app:
 
-For an individual account, use a private plugin containing the same skill and a reference to your own registered KeyPool app:
-
-1. Register `https://keypool.whatsinfor.me/mcp` from ChatGPT's Plugins page in developer mode. Complete OAuth on KeyPool's consent page using your operator-issued team token.
-2. Open that app's details and obtain its exact app ID from the URL. An `asdk_app_...` ID is the `plugin_asdk_app_...` URL identifier with only the leading `plugin_` removed.
-3. Clone this repository and build the private package with that verified ID:
+1. Register `https://keypool.whatsinfor.me/mcp` from ChatGPT's Plugins page in
+   developer mode. Complete OAuth on KeyPool consent using your operator-issued token.
+2. Refresh tool metadata if needed **before** the final package upload.
+3. In the existing app's details, use **More actions → Download plugin ZIP**.
+   Keep that original ZIP for recovery. Read the exact native package name/version
+   from `.codex-plugin/plugin.json` and app ID from `.app.json`.
+4. Build the combined package using those verified values and a higher native version:
 
    ```sh
-   python3 tools/build-plugin.py --chatgpt-app-id asdk_app_YOUR_VERIFIED_ID
+   python3 tools/build-plugin.py \
+     --chatgpt-app-id asdk_app_YOUR_VERIFIED_ID \
+     --chatgpt-base-archive /path/to/downloaded-plugin.zip \
+     --chatgpt-package-name YOUR_VERIFIED_NATIVE_PACKAGE_NAME \
+     --chatgpt-version NEXT_NATIVE_PACKAGE_VERSION
    ```
 
-4. In a ChatGPT Work chat, ask Plugin Creator to create a private plugin from the generated `dist/keypool-chatgpt/keypool-workflows.zip`. Install it and select **KeyPool workflows** with an @ mention in a new chat.
+5. Use that same app's **Upload new version** control with the generated ZIP under
+   `dist/keypool-chatgpt-cloud/`. Download it again and compare all seven files.
+6. In a new Work chat, select only **keypool**, load its skill and call
+   `keypool_profile` once. Check the actual skill load and granted catalog before
+   uninstalling a redundant **KeyPool workflows** wrapper.
 
-The private package omits both MCP configuration files, uses an app reference, and keeps the skill and service references aligned with this release. See [OpenAI's app-reference guide](https://developers.openai.com/codex/enterprise/plugin-management).
+The builder preserves the app binding byte for byte and retains native presentation
+and default-prompt metadata. It changes only native version/skill path and adds the
+canonical skill files with app-only presentation metadata. It supports the observed
+minimal app archive, rejecting other content for review. The cloud native version is
+independent of canonical/backend `0.1.4`. Account-specific bindings and ZIPs are
+never published here. The connection and its OAuth permissions remain unchanged.
 
-The private skill package reuses the existing app's connection and permissions. Each account needs its own accessible app and private plugin; another person's private plugin link does not grant access. Keep the original registered app connected. Account-specific bindings are not published here.
+Observed on 2026-10-01: **Refresh tools** regenerated the app's downloadable archive
+as a two-file package without skills. The details page still showed Skills 1, but a
+fresh chat could not load the skill. Refresh first, then restore the combined package;
+verify saved bytes and actual fresh-chat execution after the final upload.
 
-Version 0.1.4 was verified in a fresh ChatGPT web Work chat after **Refresh tools**: the bundled skill and data reference loaded, `keypool_profile` ran once and returned 13 authorized services and 33 provider tools. The response correctly limited all five APILayer services to the configured Free operations and explained the per-account allowance, unknown remaining quota, egress-IP perspective and unavailable forecast/batch/rendering features. No provider operations or file creation were used. The owner previously tested native mobile on version 0.1.2; version 0.1.4 has not been independently retested on mobile. These checks apply to that account and connection. To qualify another account/client, use a new Work chat and check the actual profile and skill guidance. See [OpenAI's supported plugin surfaces](https://developers.openai.com/codex/plugins).
+Accounts without app-package release controls can use the previous private wrapper:
+`python3 tools/build-plugin.py --chatgpt-app-id asdk_app_YOUR_VERIFIED_ID`, then
+create/update the private **KeyPool workflows** plugin through Plugin Creator.
+Keep its registered app connected and select one skill variant per chat.
+[App references](https://developers.openai.com/codex/enterprise/plugin-management)
+do not grant access or register another MCP server. Arbitrary imported remote-MCP
+packages have a different host support boundary.
 
-An existing Codex marketplace installation can stay installed. It shares the canonical skill and backend with the private ChatGPT package, while each client keeps its own installation. In ChatGPT, select KeyPool workflows and keep the original KeyPool app connected as its dependency. If both variants appear in one client, select one for a chat to avoid duplicate instructions or tool choices.
+The previous wrapper release `0.1.4` was verified in a fresh web Work chat with one
+profile call, 13 services and 33 provider tools. It did not run provider operations.
+The combined native package `1.0.1` was verified on 2026-10-01 after the redundant
+wrapper was uninstalled: a fresh web Work chat loaded the actual bundled skill
+and reference, then one profile call returned 13 services and 33 provider tools.
+All seven downloaded files matched the candidate and the app binding was preserved.
+No provider operations were run. Native mobile and Codex execution remain separate
+from web qualification. A viewport emulation is insufficient.
 
-Public ChatGPT directory distribution requires a separate verified publisher submission. This repository is a public, self-distributed marketplace; it is not an approved OpenAI directory listing.
+Public ChatGPT directory distribution requires a separate verified publisher
+submission. This repository is a public self-distributed marketplace, not an
+approved OpenAI directory listing.
 
 ## Missing services and reconnection
 
@@ -92,6 +128,6 @@ Complete consent within ten minutes in the browser/profile where reconnect opene
 
 ## Keeping versions aligned
 
-Install the matching release and rebuild your private variant after a skill update. The backend uses this package's version and serves identical canonical skill resources over MCP. Maintainer checks compare every skill digest, the account-filtered tool schemas, and the server version against `release.json` before publishing marketplace changes.
+Install the matching canonical release and rebuild the combined app package after a skill update. The backend uses this package's version and serves identical canonical skill resources over MCP. Maintainer checks compare every skill digest, the account-filtered tool schemas, and the server version against `release.json` before publishing marketplace changes.
 
-Changes to MCP tool descriptions, schemas, annotations or authentication metadata require a server deployment followed by **Refresh tools** on the existing ChatGPT app and a new chat. A skill/reference change requires a new package version: refresh the Codex marketplace installation and update the existing private workflow plugin separately. Reconnection changes token/scopes. These are separate operations; GitHub releases do not automatically update an uploaded private skill. See [OpenAI metadata refresh](https://developers.openai.com/plugins/deploy/connect-chatgpt).
+Changes to MCP tool descriptions, schemas, annotations or authentication metadata require a server deployment followed by **Refresh tools** on the existing ChatGPT app, restoration of the combined package, and a new chat. A skill/reference change requires a new package version: refresh the Codex marketplace installation and upload the combined app package separately. Reconnection changes token/scopes. These are separate operations; GitHub releases do not automatically update an uploaded private skill. See [OpenAI metadata refresh](https://developers.openai.com/plugins/deploy/connect-chatgpt).
