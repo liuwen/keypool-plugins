@@ -35,7 +35,7 @@ The current package is version `0.1.4`. `release.json` records its file, skill-r
 
 Access is distributed by the operator; there are no payments or public self-service enrollment. See [support](docs/SUPPORT.md), [privacy](docs/PRIVACY.md), and [terms](docs/TERMS.md).
 
-## Update
+## Update in Codex
 
 Refresh the marketplace and reinstall the plugin to pick up a new bundle version:
 
@@ -128,6 +128,23 @@ Complete consent within ten minutes in the browser/profile where reconnect opene
 
 ## Keeping versions aligned
 
+The current personal ChatGPT web package uses **Upload new version** for bundled
+skill/reference changes. The builder automates ZIP creation; publishing or
+refreshing this GitHub marketplace does not update that web copy. Public README
+and guide edits outside the bundle do not require a new cloud ZIP.
+
+Official OpenAI documentation provides a separate [workspace-admin GitHub import
+and sync route](https://learn.chatgpt.com/docs/enterprise/plugin-management), with
+daily synchronization or **Sync now**. This personal setup has not been moved to
+workspace management, and a personal-account repository-sync path has not been
+established. Imported MCP configurations are desktop-only; web-compatible
+workspace plugins reference an existing app and preserve its access requirements.
+
 Install the matching canonical release and rebuild the combined app package after a skill update. The backend uses this package's version and serves identical canonical skill resources over MCP. Maintainer checks compare every skill digest, the account-filtered tool schemas, and the server version against `release.json` before publishing marketplace changes.
 
 Changes to MCP tool descriptions, schemas, annotations or authentication metadata require a server deployment followed by **Refresh tools** on the existing ChatGPT app, restoration of the combined package, and a new chat. A skill/reference change requires a new package version: refresh the Codex marketplace installation and upload the combined app package separately. Reconnection changes token/scopes. These are separate operations; GitHub releases do not automatically update an uploaded private skill. See [OpenAI metadata refresh](https://developers.openai.com/plugins/deploy/connect-chatgpt).
+
+Uninstalling the redundant wrapper removes its installed bundle. Its owned
+Personal → Created by you entry can remain with an Install button. Removing that
+listing is separate from uninstalling; no deletion control was exposed in the
+2026-10-01 inspection of this personal plugin's UI or available tools.
